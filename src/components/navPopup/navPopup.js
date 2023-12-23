@@ -11,7 +11,6 @@ export const NavPopup = () => {
   const sectionsRef = useRef({});
 
   const sections = ["#home", "#works", "#skills", "#about"];
-  if (typeof window !== 'undefined' && typeof IntersectionObserver !== 'undefined') {
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -34,15 +33,14 @@ export const NavPopup = () => {
     });
 
     return () => {
-      if (sectionsRef.current) {
-        Object.values(sectionsRef.current).forEach((element) => {
+      if (sectionsRef) {
+        Object.values(sectionsRef).forEach((element) => {
           observer.unobserve(element);
         });
       }
     };
-  }, [observer]);
+  }, []);
 
-  }
   return (
     <>
       <div className="buttonMenu">

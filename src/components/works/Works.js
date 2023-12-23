@@ -7,8 +7,7 @@ import Fade from "react-reveal/Fade";
 
 import "./Works.css";
 
-import Portfolio from "../../assets/recentprojects/react-portfolio.png";
-import { ProjectView } from "../projectView/ProjectView";
+
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -25,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
 
 export const Works = () => {
   const classes = useStyles();
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [showProjectView, setShowProjectView] = useState(false);
-  const [projects, setProjects] = useState([
+  const [ setSelectedProject] = useState(null);
+  const [setShowProjectView] = useState(false);
+  const [projects] = useState([
     {
       id: 1,
       title: "Bose landing page",

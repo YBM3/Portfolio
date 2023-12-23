@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react-hooks/rules-of-hooks */
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@material-ui/core";
 
@@ -10,10 +9,7 @@ export const SideNavbar = () => {
   const sectionsRef = useRef({});
 
   const sections = ["#home", "#works", "#skills", "#about"];
-  if (
-    typeof window !== "undefined" &&
-    typeof IntersectionObserver !== "undefined"
-  ) {
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,14 +30,13 @@ export const SideNavbar = () => {
       });
 
       return () => {
-        if (sectionsRef.current) {
-          Object.values(sectionsRef.current).forEach((element) => {
+        if (sectionsRef) {
+          Object.values(sectionsRef).forEach((element) => {
             observer.unobserve(element);
           });
         }
       };
-    }, [observer]);
-  }
+    }, []);
 
   return (
     <nav>
