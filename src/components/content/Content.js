@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     marginLeft: theme.spacing(50),
     "@media (max-width: 768px)": {
-      marginLeft: theme.spacing(10),
+      marginLeft: theme.spacing(2),
     },
   },
   jobs: {
