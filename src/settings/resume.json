@@ -1,0 +1,41 @@
+{
+  "basics": {
+    "name": "Aleksander Porakh",
+    "label": "Front-end Developer",
+    "email": "aliaksandrporakh@gmail.com",
+    "phone": "(XXX) XXX-XXXX",
+    "picture": "mt.png",
+    "x_title": "Hello, I'm",
+    "job1": "Front-end Developer",
+    "keywords": "personal,website,portfolio,template,kit,ybm3,webdev,web,developer,angeles,philippines,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp,markdown",
+    "url": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Gdynia",
+      "country": "Poland",
+      "countryCode": "PL",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Google",
+        "username": "aliaksandrporakh@gmail.com",
+        "url": "mailto:aliaksandrporakh@gmail.com",
+        "x_icon": "fab fa-google"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "aliaksandr-porakh",
+        "url": "https://www.linkedin.com/in/aliaksandr-porakh-34ba96235/",
+        "x_icon": "fab fa-linkedin-in"
+      },
+      {
+        "network": "GitHub",
+        "username": "YBM3",
+        "url": "https://github.com/YBM3/",
+        "x_icon": "fab fa-github"
+      }
+    ]
+  }
+}
