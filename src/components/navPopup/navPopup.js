@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@material-ui/core";
 import { MdMenu } from "react-icons/md";
@@ -9,6 +11,7 @@ export const NavPopup = () => {
   const sectionsRef = useRef({});
 
   const sections = ["#home", "#works", "#skills", "#about"];
+  if (typeof window !== 'undefined' && typeof IntersectionObserver !== 'undefined') {
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -38,6 +41,8 @@ export const NavPopup = () => {
       }
     };
   }, [observer]);
+
+  }
   return (
     <>
       <div className="buttonMenu">

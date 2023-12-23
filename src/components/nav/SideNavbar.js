@@ -9,36 +9,39 @@ export const SideNavbar = () => {
   const [activeNav, setActiveNav] = useState("#");
   const sectionsRef = useRef({});
 
-  const sections = ["#home", "#works",  "#skills", "#about",];
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveNav("#" + entry.target.id);
+  const sections = ["#home", "#works", "#skills", "#about"];
+  if (
+    typeof window !== "undefined" &&
+    typeof IntersectionObserver !== "undefined"
+  ) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveNav("#" + entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    useEffect(() => {
+      sections.forEach((id) => {
+        const element = document.querySelector(id);
+        if (element) {
+          sectionsRef.current[id] = element;
+          observer.observe(element);
         }
       });
-    },
-    { threshold: 0.1 }
-  );
 
-  useEffect(() => {
-    sections.forEach((id) => {
-      const element = document.querySelector(id);
-      if (element) {
-        sectionsRef.current[id] = element;
-        observer.observe(element);
-      }
-    });
-
-    return () => {
-      if (sectionsRef.current) {
-        Object.values(sectionsRef.current).forEach((element) => {
-          observer.unobserve(element);
-        });
-      }
-    };
-  }, [observer]);
+      return () => {
+        if (sectionsRef.current) {
+          Object.values(sectionsRef.current).forEach((element) => {
+            observer.unobserve(element);
+          });
+        }
+      };
+    }, [observer]);
+  }
 
   return (
     <nav>
