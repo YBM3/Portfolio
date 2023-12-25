@@ -3,11 +3,11 @@ import { Button, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextDecrypt } from "../content/TextDecrypt";
 import Portfolio1 from "../../assets/bose1.png";
+import Portfolio2 from "../../assets/Catalog.jpg";
+import Portfolio3 from "../../assets/Screenshot_4.png";
 import Fade from "react-reveal/Fade";
 
 import "./Works.css";
-
-
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -24,8 +24,6 @@ const useStyles = makeStyles((theme) => ({
 
 export const Works = () => {
   const classes = useStyles();
-  const [ setSelectedProject] = useState(null);
-  const [setShowProjectView] = useState(false);
   const [projects] = useState([
     {
       id: 1,
@@ -36,57 +34,33 @@ export const Works = () => {
       imageMedia: `${Portfolio1}`,
       imageMore: `${Portfolio1}`,
       tech: "Html, Css, Javascript",
+      view: "https://ybm3.github.io/layout_miami/",
+      source: "https://github.com/YBM3/bose-landing",
     },
     {
       id: 2,
-      title: "React Portfolio",
-      description: `Designed and developed a ReactJS portfolio 
-      with fancy 3D animations using Three.js for 
-      the background element.`,
-      alter: "React Portfolio",
-      image: `${Portfolio1}`,
-      imageMore: `${Portfolio1}`,
-      tech: "React, Material UI, Three.js",
+      title: "Rent a Car application",
+      description: `This user-friendly app, designed to be convenient in mind, offers a seamless and enjoyable experience for renting the perfect vehicle for your needs.`,
+      alter: "Rent a Car application",
+      image: `${Portfolio2}`,
+      imageMore: `${Portfolio2}`,
+      imageMedia: `${Portfolio2}`,
+      tech: "React, JS, CSS, Redux, Axios, REST API",
+      view: "https://rentpp.netlify.app/",
+      source: "https://github.com/YBM3/rent-a-car",
     },
     {
       id: 3,
-      title: "React Portfolio",
-      description: `Designed and developed a ReactJS portfolio 
-      with fancy 3D animations using Three.js for 
-      the background element.`,
-      alter: "React Portfolio",
-      image: `${Portfolio1}`,
-      imageMore: `${Portfolio1}`,
-      tech: "React, Material UI, Three.js",
-    },
-    {
-      id: 4,
-      title: "React Portfolio",
-      description: `Designed and developed a ReactJS portfolio 
-      with fancy 3D animations using Three.js for 
-      the background element.`,
-      alter: "React Portfolio",
-      image: `${Portfolio1}`,
-      imageMore: `${Portfolio1}`,
-      tech: "React, Material UI, Three.js",
-    },
-    {
-      id: 5,
-      title: "React Portfolio",
-      description: `Designed and developed a ReactJS portfolio 
-      with fancy 3D animations using Three.js for 
-      the background element.`,
-      alter: "React Portfolio",
-      image: `${Portfolio1}`,
-      imageMore: `${Portfolio1}`,
-      tech: "React, Material UI, Three.js",
+      title: "Yoga landing page",
+      description: `A tranquil Yoga studio landing page promoting wellness. Features clean design, intuitive navigation, and responsive layout. Provides detailed class, schedule, and instructor information for easy booking.`,
+      image: `${Portfolio3}`,
+      imageMore: `${Portfolio3}`,
+      imageMedia: `${Portfolio3}`,
+      tech: "React, HTML, CSS, JS, Tailwind CSS",
+      view: "https://yogalanding.netlify.app/",
+      source: "https://github.com/YBM3/yoga",
     },
   ]);
-
-  const handleViewProject = (project) => {
-    setSelectedProject(project);
-    setShowProjectView(true);
-  };
 
   return (
     <section id="works">
@@ -178,9 +152,17 @@ export const Works = () => {
                 <Button
                   variant="contained"
                   color="primary"
-                  onClick={() => handleViewProject(project)}
+                  onClick={() => window.open(project.view, "_blank")}
                 >
                   View Project
+                </Button>
+                <Button
+                  variant="contained"
+                  style={{ marginTop: "1em" }}
+                  color="primary"
+                  onClick={() => window.open(project.source, "_blank")}
+                >
+                  View Source
                 </Button>
               </div>
             </div>
