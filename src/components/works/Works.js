@@ -63,7 +63,7 @@ export const Works = () => {
     },
     {
       id: 4,
-      title: "Portfolio: Reflection of My Growth in Web Development",
+      title: "Portfolio",
       description: `Welcome to my web development world! Explore my portfolio, a digital showcase of FrontEnd achievements. Witness the fusion of creativity and tech in HTML, CSS, JavaScript, React, Node.js. Git and npm ensure efficient project management. It's more than projects; it's a narrative of my growth, reflecting passion for modern web standards. Join me where design meets functionality. Welcome to my creative space!`,
       image: `${Portfolio4}`,
       imageMore: `${Portfolio4}`,
