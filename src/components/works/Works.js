@@ -5,6 +5,7 @@ import { TextDecrypt } from "../content/TextDecrypt";
 import Portfolio1 from "../../assets/bose1.png";
 import Portfolio2 from "../../assets/Catalog.jpg";
 import Portfolio3 from "../../assets/Screenshot_4.png";
+import Portfolio4 from "../../assets/Screenshot_5.png";
 import Fade from "react-reveal/Fade";
 
 import "./Works.css";
@@ -59,6 +60,17 @@ export const Works = () => {
       tech: "React, HTML, CSS, JS, Tailwind CSS",
       view: "https://yogalanding.netlify.app/",
       source: "https://github.com/YBM3/yoga",
+    },
+    {
+      id: 4,
+      title: "Portfolio: Reflection of My Growth in Web Development",
+      description: `Welcome to my web development world! Explore my portfolio, a digital showcase of FrontEnd achievements. Witness the fusion of creativity and tech in HTML, CSS, JavaScript, React, Node.js. Git and npm ensure efficient project management. It's more than projects; it's a narrative of my growth, reflecting passion for modern web standards. Join me where design meets functionality. Welcome to my creative space!`,
+      image: `${Portfolio4}`,
+      imageMore: `${Portfolio4}`,
+      imageMedia: `${Portfolio4}`,
+      tech: "React, HTML, CSS, JS, Tailwind CSS, node.js, npm, Git",
+      view: "https://aleksanderporakh.netlify.app/",
+      source: "https://github.com/YBM3/Portfolio",
     },
   ]);
 
